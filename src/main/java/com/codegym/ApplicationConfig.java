@@ -43,12 +43,6 @@ import java.util.Properties;
 public class ApplicationConfig extends WebMvcConfigurerAdapter implements ApplicationContextAware {
     private ApplicationContext applicationContext;
 
-
-
-    @Override
-    public void addFormatters(FormatterRegistry registry) {
-        registry.addFormatter(new com.codegym.cms.formatter.LocalDateFormatter("dd-MM-yyyy"));
-    }
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.applicationContext = applicationContext;

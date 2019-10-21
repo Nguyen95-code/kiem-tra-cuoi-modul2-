@@ -9,7 +9,7 @@
 <p>
     <a href="/products">Product list</a>
 </p>
-<form th:action="@{/edit-product/}" th:object="${product}" method="post">
+<form th:action="@{/product/edit/}" th:object="${product}" method="post">
     <input th:type="hidden" name="id" th:field="*{id}">
     <table>
         <tr>
@@ -21,11 +21,6 @@
             <td>Price</td>
             <td><input type="text" th:field="*{price}"/></td>
             <td th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Name Error</td>
-        </tr>
-        <tr>
-            <td>Price:</td>
-            <td><input type="text" th:field="*{dateCreate}"/></td>
-            <td th:if="${#fields.hasErrors('dateCreate')}" th:errors="*{dateCreate}">Name Error</td>
         </tr>
         <tr>
             <td>Quantity:</td>

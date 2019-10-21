@@ -10,7 +10,7 @@
 <p>
     <a href="/products">Product list</a>
 </p>
-<form th:action="@{/delete-product}" th:object="${product}" method="post">
+<form th:action="@{/product/delete}" th:object="${product}" method="post">
     <input th:type="hidden" name="id" th:field="*{id}">
     <table>
         <tr>
@@ -20,10 +20,6 @@
         <tr>
             <td>Price:</td>
             <td th:text="*{price}"></td>
-        </tr>
-        <tr>
-            <td>Quantity:</td>
-            <td th:text="*{dateCreate}"></td>
         </tr>
         <tr>
             <td>Quantity:</td>
